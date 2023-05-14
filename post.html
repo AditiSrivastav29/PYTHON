@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+    <title>Post a Job</title>
+  </head>
+  <body>
+    <h1>Post a Job</h1>
+    <form action="submit-job.php" method="POST">
+      <label for="job-title">Job Title:</label>
+      <input type="text" id="job-title" name="job-title" required><br><br>
+      
+      <label for="company-name">Company Name:</label>
+      <input type="text" id="company-name" name="company-name" required><br><br>
+      
+      <label for="job-description">Job Description:</label>
+      <textarea id="job-description" name="job-description" required></textarea><br><br>
+      
+      <label for="job-type">Job Type:</label>
+      <select id="job-type" name="job-type">
+        <option value="full-time">Full-time</option>
+        <option value="part-time">Part-time</option>
+        <option value="contract">Contract</option>
+        <option value="internship">Internship</option>
+        <option value="freelance">Freelance</option>
+      </select><br><br>
+      
+      <label for="job-location">Job Location:</label>
+      <input type="text" id="job-location" name="job-location" required><br><br>
+      
+      <label for="job-salary">Job Salary:</label>
+      <input type="text" id="job-salary" name="job-salary"><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
