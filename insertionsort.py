@@ -1,5 +1,6 @@
 def insertionSort(arr):
- for i in range(1, len(arr)):
+ n= len(arr)
+ for i in range(1,n ):
  
         key = arr[i]
  
