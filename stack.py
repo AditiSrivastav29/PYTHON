@@ -7,14 +7,14 @@ def push():
     else:
         val = int(input("Enter the value: "))
         stack.append(val)
-        globals()['top'] += 1
+        globals () ['top']+= 1
 
 def pop():
     if top == -1:
         print("Underflow")
     else:
         stack.pop()
-        globals()['top'] -= 1
+        globals ()['top'] -= 1
 
 def show():
     if top == -1:
