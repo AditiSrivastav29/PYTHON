@@ -1,2 +1,0 @@
-def Linked_list():
-    

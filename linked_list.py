@@ -19,37 +19,40 @@ class LinkedList:
 
     def insert_at_end(self, data):
         new_node = Node(data)
-        if not self.head:
+        if self.head is None:
             self.head = new_node
-            return
-        last_node = self.head
-        while last_node.next:
-            last_node = last_node.next
-        last_node.next = new_node
-
-
-    def delete(self, key):
-        current_node = self.head
-        if current_node and current_node.data == key:
-            self.head = current_node.next
-            current_node = None
-            return
-        prev = None
-        while current_node:
-            if current_node.data == key:
-                break
-            prev = current_node
-            current_node = current_node.next
-        if current_node is None:
-            return
-        prev.next = current_node.next
-        current_node = None
+        else:
+            last_node = self.head              #curr = self.head       So, here curr denotes last_node
+            while last_node.next:              #while curr.next
+                last_node = last_node.next     # curr = curr.next
+            last_node.next = new_node          # curr.next = new_node
 
     def delete_at_beginning(self):
         if self.head:
             current_node = self.head
             self.head = current_node.next
             current_node = None
+        else:
+            print(" list is empty ")
+
+    
+    def delete(self, X):              # Here temp = current_node
+        temp = self.head                # X = value to be deleted
+        if temp and temp.data == X:
+            self.head = temp.next
+            temp = None
+            return
+        prev = None
+        while temp:
+            if temp.data == X:
+                break
+            prev = temp
+            temp = temp.next
+        if temp is None:
+            return
+        prev.next = temp.next
+        temp = None
+
 
     def search(self, key):
         current_node = self.head
